@@ -1,0 +1,20 @@
+<div class="terminal-container">
+  <div class="header">
+    <span class="util-btns">
+      <span class="red-btn"></span>
+      <span class="yellow-btn"></span>
+      <span class="green-btn"></span>
+    </span>
+
+    <span class="name"> >_ Welcome</span>
+  </div>
+
+  <div class="content">
+    <span *ngFor="let line of displayedContent; let i = index">
+      <pre class="line" [innerHTML]="line"></pre>
+      <span *ngIf="i === displayedContent.length - 1" class="line loader">{{
+        loading
+      }}</span>
+    </span>
+  </div>
+</div>

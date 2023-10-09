@@ -1,0 +1,33 @@
+.app-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white-color);
+
+  .cursor {
+    width: 10px;
+    height: 10px;
+    background-color: var(--black-color);
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 300ms;
+    transition-timing-function: ease-out;
+    pointer-events: none;
+    position: absolute;
+    top: -5px;
+    z-index: 9999;
+  }
+
+  @media (hover: none) {
+    .cursor {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .cursor {
+      display: none;
+    }
+  }
+}
