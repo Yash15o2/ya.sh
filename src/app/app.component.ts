@@ -1,3 +1,4 @@
+import { EnlargeCursorService } from 'src/app/shared/services/enlarge-cursor.service';
 import { Component, HostListener, ElementRef, Renderer2 } from '@angular/core';
 
 @Component({
@@ -6,7 +7,12 @@ import { Component, HostListener, ElementRef, Renderer2 } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  isCursorOverLink: boolean = false;
+  constructor(
+    private el: ElementRef,
+    private renderer: Renderer2,
+    public enlargeCursorService: EnlargeCursorService
+  ) {}
 
   @HostListener('document:mousemove', ['$event'])
   onMouseMove(e: MouseEvent) {

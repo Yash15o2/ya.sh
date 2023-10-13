@@ -6,13 +6,13 @@
   background-color: var(--white-color);
 
   .cursor {
+    mix-blend-mode: difference;
     width: 10px;
     height: 10px;
-    background-color: var(--black-color);
+    background-color: var(--white-color);
     border-radius: 50%;
     position: absolute;
-    transition-duration: 300ms;
-    transition-timing-function: ease-out;
+    transition: all 0.3s ease-out;
     pointer-events: none;
     position: absolute;
     top: -5px;

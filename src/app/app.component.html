@@ -1,4 +1,8 @@
 <div class="app-container">
   <router-outlet></router-outlet>
-  <div class="cursor"></div>
+  <div
+    [style.width]="enlargeCursorService.cursorSize"
+    [style.height]="enlargeCursorService.cursorSize"
+    class="cursor"
+  ></div>
 </div>
