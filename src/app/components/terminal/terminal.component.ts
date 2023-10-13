@@ -1,5 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { Terminal } from 'src/app/shared/interfaces/terminal';
 
 @Component({
   selector: 'app-terminal',
@@ -7,34 +9,31 @@ import { Router } from '@angular/router';
   styleUrls: ['./terminal.component.css'],
 })
 export class TerminalComponent implements OnInit, OnDestroy {
-  loader: string[] = ['/', '-', '\\', '-'];
-  loading: string = '';
-  interval: any;
-  terminalContent = [
-    'yash/madewithlove > ng serve',
-    '',
-    '6d6164776974686c6f7665 - Time: 115ms',
-    '<span class="green-text">CREATE</span> yash/madewithlove/awesome.css',
-    '<span class="green-text">CREATE</span> yash/madewithlove/portfolio.ts',
-    '<span class="green-text">✔</span> Compiled successfully. ',
-    '<span class="green-text">✔</span> Browser application bundle generation complete.',
-    '<b>Initial Chunk Files</b> | <b>Names</b>   | <b>Raw Size</b> |',
-    '<span class="green-text">main.js</span>             | main    | <span class="cyan-text">15.74 kB</span> | ',
-    '<span class="green-text">runtime.js</span>          | runtime |  <span class="cyan-text">6.51 kB</span> | ',
-    '<span class="myClass">👋 Welcome to my portfolio website...</span>',
-  ];
-
+  terminalContent!: string[];
   displayedContent: string[] = [];
-  currentIndex: number = 0;
-  currentDate: Date = new Date();
+  loader: string[] = ['/', '-', '\\', '-'];
+  loaderSymbol: string = '';
+  interval!: ReturnType<typeof setInterval>;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private http: HttpClient) {}
 
   ngOnInit() {
-    this.displayContentWithDelay();
+    this.http
+      .get<Terminal>('assets/json/terminal-content.json')
+      .subscribe((terminalData: Terminal) => {
+        this.terminalContent = terminalData.content;
+        this.processTerminalContent();
+      });
+  }
+
+  ngOnDestroy(): void {
+    clearInterval(this.interval);
+  }
+
+  processTerminalContent() {
+    this.displayTerminalContent();
 
     const formattedDate = new Date().toISOString();
-
     this.terminalContent[1] = `Build at: <b>${formattedDate}</b> - Hash:`;
 
     setTimeout(() => {
@@ -42,26 +41,21 @@ export class TerminalComponent implements OnInit, OnDestroy {
     }, 6000);
   }
 
-  ngOnDestroy(): void {
-    clearInterval(this.interval);
-  }
-
-  displayContentWithDelay() {
-    const delay = 300;
+  displayTerminalContent() {
+    let currentIndex = 0;
 
     this.interval = setInterval(() => {
-      if (this.currentIndex < this.terminalContent.length) {
-        this.displayedContent.push(this.terminalContent[this.currentIndex]);
-        this.currentIndex++;
+      if (currentIndex < this.terminalContent.length) {
+        this.displayedContent.push(this.terminalContent[currentIndex]);
+        currentIndex++;
       } else {
         clearInterval(this.interval);
-        this.displayLoaderSymbols();
+        this.displayLoader();
       }
-    }, delay);
+    }, 300);
   }
 
-  displayLoaderSymbols() {
-    const delay = 200;
+  displayLoader() {
     let loaderIndex = -1;
 
     this.interval = setInterval(() => {
@@ -70,7 +64,7 @@ export class TerminalComponent implements OnInit, OnDestroy {
       } else {
         loaderIndex = 0;
       }
-      this.loading = this.loader[loaderIndex];
-    }, delay);
+      this.loaderSymbol = this.loader[loaderIndex];
+    }, 200);
   }
 }

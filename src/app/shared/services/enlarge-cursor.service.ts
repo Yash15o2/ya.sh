@@ -9,6 +9,5 @@ export class EnlargeCursorService {
 
   triggerSizeChange(size: string) {
     this.cursorSize = size + 'px';
-    console.log('called', this.cursorSize);
   }
 }

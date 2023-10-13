@@ -13,7 +13,7 @@
     <span *ngFor="let line of displayedContent; let i = index">
       <pre class="line" [innerHTML]="line"></pre>
       <span *ngIf="i === displayedContent.length - 1" class="line loader">{{
-        loading
+        loaderSymbol
       }}</span>
     </span>
   </div>
