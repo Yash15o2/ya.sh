@@ -1,8 +1,5 @@
 .app-container {
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: var(--white-color);
 
   .cursor {
@@ -12,10 +9,10 @@
     background-color: var(--white-color);
     border-radius: 50%;
     position: absolute;
-    transition: all 0.3s ease-out;
+    transition: all 0.25s ease-out;
     pointer-events: none;
     position: absolute;
-    top: -5px;
+    top: -10px;
     z-index: 9999;
   }
 

@@ -10,7 +10,7 @@ export class TextScrambleDirective implements OnInit, OnDestroy {
 
   private element: HTMLElement;
   private chars: string =
-    'qwertyuiopasdfghjklzxcvbnm1234567890@#$%&*'.toUpperCase();
+    'qwertyuiopasdfghjklzxcvbnm1234567890@#$%&'.toUpperCase();
   private scrambleQueue: ScrambleQueue[] = [];
   private frameRequest: number = 0;
   private frame: number = 0;
@@ -24,7 +24,7 @@ export class TextScrambleDirective implements OnInit, OnDestroy {
   ngOnInit() {
     this.phrases = [this.el.nativeElement.innerText];
     this.scrambler();
-    setInterval(() => this.scrambler(), this.delay * 1000);
+    // setInterval(() => this.scrambler(), this.delay * 1000);
   }
 
   ngOnDestroy() {

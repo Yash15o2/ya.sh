@@ -1,0 +1,9 @@
+<div class="header-container">
+  <app-logo></app-logo>
+  <ul class="menu-list">
+    <li appEnlargeCursor *ngFor="let nav of menu; index as i">
+      <span>0{{ i + 1 }}</span
+      >&nbsp;<a>{{ nav.title }}</a>
+    </li>
+  </ul>
+</div>

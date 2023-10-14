@@ -5,7 +5,7 @@ import { Directive, HostListener } from '@angular/core';
   selector: '[appEnlargeCursor]',
 })
 export class EnlargeCursorDirective {
-  enlargeCursorSize: string = '30';
+  enlargeCursorSize: string = '35';
   contractCursorSize: string = '10';
 
   constructor(private enlargeCursorService: EnlargeCursorService) {}

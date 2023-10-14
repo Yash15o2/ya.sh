@@ -1,0 +1,40 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 50px;
+  user-select: none;
+
+  .menu-list {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .menu-list li {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    padding: 4px 0;
+  }
+
+  .menu-list li span {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .header-container {
+    padding: 10px 20px;
+
+    .menu-list {
+      font-size: 12px;
+      gap: 40px;
+    }
+
+    .menu-list li span {
+      font-size: 9px;
+    }
+  }
+}
