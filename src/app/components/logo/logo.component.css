@@ -7,11 +7,6 @@
   font-size: 20px;
   transition: all 0.3s ease-out;
 
-  .first-half {
-    opacity: 0;
-    transition: opacity 2.5s;
-  }
-
   .second-half {
     position: absolute;
     left: 0;
@@ -21,11 +16,18 @@
 }
 
 .logo-container:hover {
-  .first-half {
-    opacity: 1;
-  }
-
   .second-half {
     left: 34px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .logo-container {
+    font-size: 15px;
+  }
+  .logo-container:hover {
+    .second-half {
+      left: 28px;
+    }
   }
 }

@@ -4,14 +4,6 @@
   min-height: 250px;
   border-radius: 8px;
 
-  .green-text {
-    color: var(--success-color);
-  }
-
-  .cyan-text {
-    color: var(--cyan-color);
-  }
-
   .header {
     padding: 6px 8px;
     border-radius: 6px 6px 0 0;
@@ -72,7 +64,7 @@
     .loader {
       position: absolute;
       bottom: 10px;
-      right: 110px;
+      right: 135px;
     }
   }
 }
@@ -87,7 +79,7 @@
       }
 
       .loader {
-        right: 90px;
+        right: 115px;
       }
     }
   }

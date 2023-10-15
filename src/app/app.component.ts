@@ -7,6 +7,7 @@ import { Component, HostListener, ElementRef, Renderer2 } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  private cursorDistance: number = 5;
   constructor(
     private el: ElementRef,
     private renderer: Renderer2,
@@ -16,19 +17,28 @@ export class AppComponent {
   @HostListener('document:mousemove', ['$event'])
   onMouseMove(e: MouseEvent) {
     const cursor = this.el.nativeElement.querySelector('.cursor');
-    this.renderer.setStyle(
-      cursor,
-      'top',
-      e.pageY -
-        (this.enlargeCursorService.cursorSize === '10px' ? 5 : 20) +
-        'px'
-    );
+    this.cursorDistance =
+      this.enlargeCursorService.cursorSize === '10px' ? 5 : 20;
+
+    this.renderer.setStyle(cursor, 'top', e.pageY - this.cursorDistance + 'px');
     this.renderer.setStyle(
       cursor,
       'left',
-      e.pageX -
-        (this.enlargeCursorService.cursorSize === '10px' ? 5 : 20) +
-        'px'
+      e.pageX - this.cursorDistance + 'px'
+    );
+  }
+
+  @HostListener('document:click', ['$event'])
+  onMouseClick(e: MouseEvent) {
+    const cursor = this.el.nativeElement.querySelector('.cursor');
+
+    this.cursorDistance = 5;
+
+    this.renderer.setStyle(cursor, 'top', e.pageY - this.cursorDistance + 'px');
+    this.renderer.setStyle(
+      cursor,
+      'left',
+      e.pageX - this.cursorDistance + 'px'
     );
   }
 }

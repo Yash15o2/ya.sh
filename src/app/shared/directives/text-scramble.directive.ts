@@ -9,8 +9,9 @@ export class TextScrambleDirective implements OnInit, OnDestroy {
   phrases: string[] = [];
 
   private element: HTMLElement;
-  private chars: string =
-    'qwertyuiopasdfghjklzxcvbnm1234567890@#$%&'.toUpperCase();
+  // private chars: string =
+  //   'qwertyuiopasdfghjklzxcvbnm1234567890@#$%&'.toUpperCase();
+  private chars: string = '10';
   private scrambleQueue: ScrambleQueue[] = [];
   private frameRequest: number = 0;
   private frame: number = 0;

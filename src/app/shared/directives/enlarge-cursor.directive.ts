@@ -5,12 +5,12 @@ import { Directive, HostListener } from '@angular/core';
   selector: '[appEnlargeCursor]',
 })
 export class EnlargeCursorDirective {
-  enlargeCursorSize: string = '35';
+  enlargeCursorSize: string = '45';
   contractCursorSize: string = '10';
 
   constructor(private enlargeCursorService: EnlargeCursorService) {}
 
-  @HostListener('mouseenter') onMouseEnter() {
+  @HostListener('mouseover') onMouseOver() {
     this.enlargeCursorService.triggerSizeChange(this.enlargeCursorSize);
   }
 

@@ -17,6 +17,7 @@ import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { HeaderComponent } from './components/header/header.component';
+import { TextTypingDirective } from './shared/directives/text-typing.directive';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { HeaderComponent } from './components/header/header.component';
     TextScrambleDirective,
     LogoComponent,
     HeaderComponent,
+    TextTypingDirective,
   ],
   imports: [
     BrowserModule,

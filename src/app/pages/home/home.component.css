@@ -1,1 +1,22 @@
+.home-container {
+  .intro-container {
+    padding: 100px 50px;
 
+    .intro-self {
+      max-width: 380px;
+      line-height: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .home-container {
+    .intro-container {
+      padding: 50px 20px;
+
+      .intro-self {
+        max-width: 350px;
+      }
+    }
+  }
+}
