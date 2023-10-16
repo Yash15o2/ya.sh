@@ -1,0 +1,35 @@
+.navigation-container {
+  position: fixed;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 8px;
+
+  .nav-item {
+    border-radius: 6px;
+    padding: 10px;
+    transition: all 0.2s ease-in;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .nav-item.active {
+    color: var(--white-color);
+    background-color: var(--black-color);
+  }
+}
+
+.navigation-container li {
+  display: flex;
+}
+
+@media screen and (max-width: 425px) {
+  .navigation-container {
+    bottom: 0%;
+  }
+}

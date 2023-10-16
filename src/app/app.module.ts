@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { EnlargeCursorDirective } from './shared/directives/enlarge-cursor.directive';
 import { StretchableDirective } from './shared/directives/stretchable.directive';
 import { TextScrambleDirective } from './shared/directives/text-scramble.directive';
+import { TextTypingDirective } from './shared/directives/text-typing.directive';
 
 //Components
 import { AppComponent } from './app.component';
@@ -17,20 +18,21 @@ import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { HeaderComponent } from './components/header/header.component';
-import { TextTypingDirective } from './shared/directives/text-typing.directive';
+import { NavigationComponent } from './components/navigation/navigation.component';
 
 @NgModule({
   declarations: [
+    EnlargeCursorDirective,
+    StretchableDirective,
+    TextScrambleDirective,
+    TextTypingDirective,
     AppComponent,
     TerminalComponent,
     WelcomeComponent,
     HomeComponent,
-    EnlargeCursorDirective,
-    StretchableDirective,
-    TextScrambleDirective,
     LogoComponent,
     HeaderComponent,
-    TextTypingDirective,
+    NavigationComponent,
   ],
   imports: [
     BrowserModule,

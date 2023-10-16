@@ -8,6 +8,16 @@ body {
   font-family: "JetBrains Mono", monospace;
   font-size: 14px;
 
+  ::-moz-selection {
+    color: var(--white-color);
+    background: var(--black-color);
+  }
+
+  ::selection {
+    color: var(--white-color);
+    background: var(--black-color);
+  }
+
   .underline-effect {
     display: inline-block;
     position: relative;
@@ -46,6 +56,8 @@ a {
   text-decoration: none;
   text-transform: uppercase;
   color: var(--black-color);
+  -webkit-tap-highlight-color: transparent !important;
+  outline: none !important;
 }
 
 ul {

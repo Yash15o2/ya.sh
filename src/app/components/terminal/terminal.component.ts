@@ -11,7 +11,7 @@ import { Terminal } from 'src/app/shared/interfaces/terminal';
 export class TerminalComponent implements OnInit, OnDestroy {
   terminalContent!: string[];
   displayedContent: string[] = [];
-  loader: string[] = ['/', '-', '\\', '-'];
+  loader: string[] = ['|', '/', '-', '\\'];
   loaderSymbol: string = '';
   interval!: ReturnType<typeof setInterval>;
 

@@ -1,6 +1,7 @@
 .app-container {
   height: 100vh;
   background-color: var(--white-color);
+  position: relative;
 
   .cursor {
     mix-blend-mode: difference;

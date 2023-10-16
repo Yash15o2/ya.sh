@@ -1,0 +1,13 @@
+<ul class="navigation-container">
+  <li *ngFor="let item of navList">
+    <a
+      class="nav-item"
+      appStretchable
+      [class.active]="activeItem === item"
+      routerLink="/home"
+      (click)="setActiveItem(item)"
+    >
+      {{ item.title | uppercase }}
+    </a>
+  </li>
+</ul>
