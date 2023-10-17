@@ -1,8 +1,7 @@
 <ul class="navigation-container">
   <li *ngFor="let item of navList">
     <a
-      class="nav-item"
-      appStretchable
+      class="nav-item stretchWord"
       [class.active]="activeItem === item"
       routerLink="/home"
       (click)="setActiveItem(item)"

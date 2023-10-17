@@ -1,0 +1,31 @@
+.link-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5px;
+  width: fit-content;
+
+  .list-heading {
+    margin: 0 0 10px 0;
+  }
+
+  .link-list {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 4px;
+    cursor: pointer;
+
+    .link-icon {
+      height: 14px;
+      transition: all 0.1s ease-out;
+    }
+
+    &:hover > .link-icon {
+      transform: rotate(45deg);
+    }
+
+    .link-title {
+      font-size: 13px;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+<div class="link-container">
+  <span *ngIf="showListHeading" class="list-heading"
+    >[{{ listHeading | uppercase }}]</span
+  >
+  <div class="link-list" *ngFor="let link of linkList">
+    <img class="link-icon" [src]="linkArrowIcon" alt="arrow" />
+    <a class="link-title" [routerLink]="link.redirectTo">{{ link.title }}</a>
+  </div>
+</div>
