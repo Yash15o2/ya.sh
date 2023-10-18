@@ -16,16 +16,16 @@
     top: -10px;
     z-index: 9999;
   }
+}
 
-  @media (hover: none) {
-    .cursor {
-      display: none;
-    }
+@media (hover: none) {
+  .cursor {
+    display: none;
   }
+}
 
-  @media (max-width: 1200px) {
-    .cursor {
-      display: none;
-    }
+@media (max-width: 1200px) {
+  .cursor {
+    display: none;
   }
 }

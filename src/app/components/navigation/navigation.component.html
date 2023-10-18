@@ -1,4 +1,4 @@
-<ul class="navigation-container">
+<ul *ngIf="!reachedBottom" class="navigation-container no-select">
   <li *ngFor="let item of navList">
     <a
       class="nav-item stretchWord"

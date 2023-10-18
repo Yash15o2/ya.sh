@@ -1,7 +1,8 @@
 .home-container {
-  /* border: 1px solid red; */
   .intro-container {
     padding: 100px 50px;
+    height: 65vh;
+    /* border: 1px solid red; */
 
     .intro-self {
       max-width: 380px;

@@ -1,0 +1,35 @@
+<div class="footer-container">
+  <div class="footer-content">
+    <p class="end-words">
+      Explore the transformative potential of our digital products, designed to
+      elevate your brand and create an indelible impact that lasts.
+      <app-back-to-top></app-back-to-top>
+    </p>
+    <div class="link-group">
+      <app-link
+        [linkList]="socialList"
+        [listHeading]="'connect'"
+        [isRedirect]="true"
+      ></app-link>
+      <app-link
+        [linkList]="navigationList"
+        [listHeading]="'navigation'"
+      ></app-link>
+    </div>
+  </div>
+
+  <div class="footer-track-container">
+    <div class="marquee-container">
+      <div class="marquee">
+        <a
+          class="marquee-text"
+          appEnlargeCursor
+          [href]="'mailto:yashthakur15022002@gmail.com'"
+          target="_blank"
+          *ngFor="let word of footerTrackList"
+          >{{ word | uppercase }}&nbsp;&nbsp;&nbsp;</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

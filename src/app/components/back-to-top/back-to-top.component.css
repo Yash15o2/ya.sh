@@ -1,0 +1,50 @@
+.top-btn-container {
+  position: relative;
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  .circular-text {
+    height: 70px;
+    transition: 0.2s ease-out;
+    animation: circularMotion 6s linear infinite;
+  }
+
+  .up-arrow {
+    height: 15px;
+    position: absolute;
+    transition: 0.2s ease-out;
+  }
+
+  &:hover {
+    .circular-text {
+      height: 80px;
+    }
+
+    .up-arrow {
+      animation: bounce 0.8s infinite;
+    }
+  }
+}
+
+@keyframes circularMotion {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}

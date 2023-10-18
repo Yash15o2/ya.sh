@@ -3,11 +3,13 @@
   bottom: 2%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 1px solid black;
+  border: 1px solid var(--black-color);
+  background-color: var(--white-color);
   display: flex;
   gap: 4px;
   padding: 4px;
   border-radius: 8px;
+  z-index: 999;
 
   .nav-item {
     border-radius: 6px;
@@ -16,6 +18,7 @@
     display: flex;
     align-items: center;
     gap: 5px;
+    color: var(--black-color);
   }
 
   .nav-item.active {

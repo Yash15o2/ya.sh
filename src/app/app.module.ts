@@ -6,19 +6,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
 // Directives
-import { EnlargeCursorDirective } from './shared/directives/enlarge-cursor.directive';
-import { TextScrambleDirective } from './shared/directives/text-scramble.directive';
-import { TextTypingDirective } from './shared/directives/text-typing.directive';
+import { EnlargeCursorDirective } from 'src/app/shared/directives/enlarge-cursor.directive';
+import { TextScrambleDirective } from 'src/app/shared/directives/text-scramble.directive';
+import { TextTypingDirective } from 'src/app/shared/directives/text-typing.directive';
 
 //Components
 import { AppComponent } from './app.component';
-import { TerminalComponent } from './components/terminal/terminal.component';
-import { WelcomeComponent } from './pages/welcome/welcome.component';
-import { HomeComponent } from './pages/home/home.component';
-import { LogoComponent } from './components/logo/logo.component';
-import { HeaderComponent } from './components/header/header.component';
-import { NavigationComponent } from './components/navigation/navigation.component';
-import { LinkComponent } from './components/link/link.component';
+import { TerminalComponent } from 'src/app/components/terminal/terminal.component';
+import { WelcomeComponent } from 'src/app/pages/welcome/welcome.component';
+import { HomeComponent } from 'src/app/pages/home/home.component';
+import { LogoComponent } from 'src/app/components/logo/logo.component';
+import { HeaderComponent } from 'src/app/components/header/header.component';
+import { NavigationComponent } from 'src/app/components/navigation/navigation.component';
+import { LinkComponent } from 'src/app/components/link/link.component';
+import { FooterComponent } from 'src/app/components/footer/footer.component';
+import { BackToTopComponent } from 'src/app/components/back-to-top/back-to-top.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { LinkComponent } from './components/link/link.component';
     HeaderComponent,
     NavigationComponent,
     LinkComponent,
+    FooterComponent,
+    BackToTopComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 interface Navigation {
   title: string;
@@ -29,8 +29,19 @@ export class NavigationComponent {
       route: '/contact',
     },
   ];
-
   activeItem: Navigation = this.navList[0];
+  reachedBottom: boolean = false;
+
+  // to hide navigation menu when reached to bottom
+  @HostListener('window:scroll', ['$event'])
+  onScroll() {
+    const scrollY = window.scrollY;
+
+    const documentHeight = document.documentElement.scrollHeight;
+    const windowHeight = window.innerHeight;
+    const bottomPosition = documentHeight - windowHeight;
+    this.reachedBottom = scrollY >= bottomPosition;
+  }
 
   setActiveItem(item: any) {
     this.activeItem = item;

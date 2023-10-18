@@ -1,9 +1,17 @@
-<div class="link-container">
+<div class="link-container no-select">
   <span *ngIf="showListHeading" class="list-heading"
     >[{{ listHeading | uppercase }}]</span
   >
   <div class="link-list" *ngFor="let link of linkList">
-    <img class="link-icon" [src]="linkArrowIcon" alt="arrow" />
-    <a class="link-title" [routerLink]="link.redirectTo">{{ link.title }}</a>
+    <img class="link-icon no-select" [src]="linkArrowIcon" alt="arrow" />
+    <ng-container *ngIf="isRedirect">
+      <a class="link-title" target="_blank" [href]="link.redirectTo">{{
+        link.title
+      }}</a>
+    </ng-container>
+
+    <ng-container *ngIf="!isRedirect">
+      <a class="link-title" [routerLink]="link.redirectTo">{{ link.title }}</a>
+    </ng-container>
   </div>
 </div>
