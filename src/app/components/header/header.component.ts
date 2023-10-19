@@ -9,6 +9,7 @@ export class HeaderComponent implements OnInit {
   constructor() {}
   date: Date = new Date();
   indiaTime: string = '';
+  resumeUrl: string = 'assets/docs/resume.pdf';
 
   ngOnInit(): void {
     this.indiaTime = new Date()

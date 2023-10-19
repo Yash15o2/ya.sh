@@ -21,6 +21,7 @@ import { NavigationComponent } from 'src/app/components/navigation/navigation.co
 import { LinkComponent } from 'src/app/components/link/link.component';
 import { FooterComponent } from 'src/app/components/footer/footer.component';
 import { BackToTopComponent } from 'src/app/components/back-to-top/back-to-top.component';
+import { ButtonComponent } from './components/button/button.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { BackToTopComponent } from 'src/app/components/back-to-top/back-to-top.c
     LinkComponent,
     FooterComponent,
     BackToTopComponent,
+    ButtonComponent,
   ],
   imports: [
     BrowserModule,

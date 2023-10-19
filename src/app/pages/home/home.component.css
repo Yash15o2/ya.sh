@@ -11,7 +11,7 @@
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 460px) {
   .home-container {
     .intro-container {
       padding: 50px 20px;

@@ -105,7 +105,7 @@
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 460px) {
   .footer-container {
     .footer-content {
       padding: 50px 20px;
