@@ -25,7 +25,7 @@
     }
 
     .up-arrow {
-      animation: bounce 0.8s infinite;
+      animation: bounce 2s infinite;
     }
   }
 }
@@ -40,11 +40,19 @@
 }
 
 @keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0);
+  0% {
+    transform: translateY(0%);
+  }
+  25% {
+    transform: translateY(-35%);
   }
   50% {
-    transform: translateY(-5px);
+    transform: translateY(0%);
+  }
+  75% {
+    transform: translateY(-65%);
+  }
+  100% {
+    transform: translateY(0%);
   }
 }
