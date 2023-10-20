@@ -11,6 +11,12 @@ body {
   -webkit-tap-highlight-color: transparent !important;
   scroll-behavior: smooth;
 
+  .glassmorphic {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+
   .no-select {
     user-select: none;
   }

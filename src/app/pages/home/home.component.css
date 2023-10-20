@@ -1,12 +1,25 @@
 .home-container {
   .intro-container {
-    padding: 100px 50px;
-    height: 65vh;
+    padding: 0 50px;
     /* border: 1px solid red; */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
 
     .intro-self {
       max-width: 380px;
       line-height: 20px;
+    }
+
+    .update-detail-container {
+      width: calc(100% - 100px);
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
     }
   }
 }
@@ -14,10 +27,15 @@
 @media screen and (max-width: 460px) {
   .home-container {
     .intro-container {
-      padding: 50px 20px;
+      padding: 0 20px;
 
       .intro-self {
         max-width: 350px;
+      }
+
+      .update-detail-container {
+        width: calc(100% - 40px);
+        font-size: 12px;
       }
     }
   }

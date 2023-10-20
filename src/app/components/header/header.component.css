@@ -3,6 +3,9 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 50px;
+  position: fixed;
+  width: calc(100% - 100px);
+  z-index: 999;
 
   .india {
     font-size: 14px;
@@ -12,6 +15,7 @@
 @media screen and (max-width: 460px) {
   .header-container {
     padding: 10px 20px;
+    width: calc(100% - 40px);
 
     .india {
       font-size: 12px;

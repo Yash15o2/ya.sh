@@ -7,7 +7,8 @@ import { Component, HostListener, ElementRef, Renderer2 } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  private cursorDistance: number = 5;
+  cursorDistance: number = 5;
+
   constructor(
     private el: ElementRef,
     private renderer: Renderer2,

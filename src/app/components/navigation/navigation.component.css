@@ -4,7 +4,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
   border: 1px solid var(--black-color);
-  background-color: var(--white-color);
   display: flex;
   gap: 4px;
   padding: 4px;

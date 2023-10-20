@@ -18,7 +18,7 @@ export class FooterComponent {
   socialList: LinkList[] = [
     {
       title: 'LinkedIn',
-      redirectTo: 'https://www.linkedin.com/feed/?doFeedRefresh=true&nis=true',
+      redirectTo: 'https://www.linkedin.com/in/yash-thakur-73662919b/',
     },
     {
       title: 'Github',
